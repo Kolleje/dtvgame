@@ -36,22 +36,22 @@ function load_media()
       main_sprite['right'] = new Object();
       main_sprite['right']['standing'] = new Array();
       main_sprite['right']['standing'][1] = new Image();
-      main_sprite['right']['standing'][1].src = 'images/facingR_1.png';
+      main_sprite['right']['standing'][1].src = 'images/FacingR_1.png';
       main_sprite['right']['standing'][2] = new Image();
-      main_sprite['right']['standing'][2].src = 'images/facingR_2.png';
+      main_sprite['right']['standing'][2].src = 'images/FacingR_2.png';
       main_sprite['right']['standing'][3] = new Image();
-      main_sprite['right']['standing'][3].src = 'images/facingR_3.png';
+      main_sprite['right']['standing'][3].src = 'images/FacingR_3.png';
 
 
       // standing facing left
       main_sprite['left'] = new Object();
       main_sprite['left']['standing'] = new Array();
       main_sprite['left']['standing'][1] = new Image();
-      main_sprite['left']['standing'][1].src = 'images/facingL_1.png';
+      main_sprite['left']['standing'][1].src = 'images/FacingL_1.png';
       main_sprite['left']['standing'][2] = new Image();
-      main_sprite['left']['standing'][2].src = 'images/facingL_2.png';
+      main_sprite['left']['standing'][2].src = 'images/FacingL_2.png';
       main_sprite['left']['standing'][3] = new Image();
-      main_sprite['left']['standing'][3].src = 'images/facingL_3.png';
+      main_sprite['left']['standing'][3].src = 'images/FacingL_3.png';
 
 
       // running facing right
@@ -180,20 +180,19 @@ this.Animation='standing';
     this.Animation='running';
   }
 }
-function loop()
-{
-  main_ctx.clearRect(0,0,800,600);
 
-  player.check_keys();
-  player.draw();
- 
-  if (is_playing)
-    requestaframe(loop);
-}
 function start_loop()
 {
-  is_playing = true;
-  loop();
+  if (is_playing == true) {
+    is_playing = false;
+    document.getElementById('b_start').innerHTML = 'start';
+
+  } else {
+    is_playing = true;
+    document.getElementById('b_start').innerHTML = 'pause';
+    loop();
+  }
+
   // background_ctx.drawImage(bg_sprite, 0, 0);
 }
 function stop_loop()
@@ -249,4 +248,16 @@ function key_up(e)
     player.m_right = false;
     e.preventDefault();
   }
+}
+
+
+function loop()
+{
+  main_ctx.clearRect(0,0,800,600);
+
+  player.check_keys();
+  player.draw();
+ 
+  if (is_playing)
+    requestaframe(loop);
 }
