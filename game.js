@@ -145,18 +145,18 @@ Player.prototype.draw = function()
 
   }
 
-  if (this.AniState > (limit*10)) {
+  if (this.AniState > (limit*5)) {
     this.AniState = 1;
   }
 
-  main_ctx.drawImage(main_sprite[this.facing][this.Animation][1+Math.floor((this.AniState-1)/10)], this.X, this.Y);
+  main_ctx.drawImage(main_sprite[this.facing][this.Animation][1+Math.floor((this.AniState-1)/5)], this.X, this.Y);
   this.AniState++;
 
   document.getElementById('x').innerHTML = this.X;
   document.getElementById('y').innerHTML = this.Y;
   document.getElementById('animation').innerHTML = this.Animation;
   document.getElementById('facing').innerHTML = this.facing;
-  document.getElementById('aframe').innerHTML = 1+Math.floor((this.AniState-1)/10);
+  document.getElementById('aframe').innerHTML = 1+Math.floor((this.AniState-1)/5);
 };
 Player.prototype.check_keys = function()
 {
