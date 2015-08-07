@@ -1,5 +1,5 @@
 var is_playing = false;
-var main_sprite = new Object();
+var main_sprite = new Array();
 var map_img = new Array();
 init();
 
@@ -38,67 +38,240 @@ function load_media()
       map_img[1] = new Image();
       map_img[1].src = 'data/maps/testmap.png';
 
+      main_sprite[1] = new Array();
+      main_sprite[2] = new Array();
+      main_sprite[3] = new Array();
+      main_sprite[4] = new Array();
+      main_sprite[5] = new Array();
+      main_sprite[6] = new Array();
+      main_sprite[7] = new Array();
+      main_sprite[8] = new Array();
+
 
       // standing facing right = 5
-      main_sprite[5] = new Array();
       main_sprite[5]['standing'] = new Array();
       main_sprite[5]['standing'][1] = new Image();
-      main_sprite[5]['standing'][1].src = 'data/sprites/FacingR_1.png';
+      main_sprite[5]['standing'][1].src = 'data/sprites/animation/standing/FacingR_1.png';
       main_sprite[5]['standing'][2] = new Image();
-      main_sprite[5]['standing'][2].src = 'data/sprites/FacingR_2.png';
+      main_sprite[5]['standing'][2].src = 'data/sprites/animation/standing/FacingR_2.png';
       main_sprite[5]['standing'][3] = new Image();
-      main_sprite[5]['standing'][3].src = 'data/sprites/FacingR_3.png';
+      main_sprite[5]['standing'][3].src = 'data/sprites/animation/standing/FacingR_3.png';
 
 
       // standing facing left = 1
-      main_sprite[1] = new Object();
       main_sprite[1]['standing'] = new Array();
       main_sprite[1]['standing'][1] = new Image();
-      main_sprite[1]['standing'][1].src = 'data/sprites/FacingL_1.png';
+      main_sprite[1]['standing'][1].src = 'data/sprites/animation/standing/FacingL_1.png';
       main_sprite[1]['standing'][2] = new Image();
-      main_sprite[1]['standing'][2].src = 'data/sprites/FacingL_2.png';
+      main_sprite[1]['standing'][2].src = 'data/sprites/animation/standing/FacingL_2.png';
       main_sprite[1]['standing'][3] = new Image();
-      main_sprite[1]['standing'][3].src = 'data/sprites/FacingL_3.png';
+      main_sprite[1]['standing'][3].src = 'data/sprites/animation/standing/FacingL_3.png';
+
+
+      main_sprite[2]['standing'] = new Array();
+      main_sprite[2]['standing'][1] = new Image();
+      main_sprite[2]['standing'][1].src = 'data/sprites/animation/standing/FacingL_1.png';
+      main_sprite[2]['standing'][2] = new Image();
+      main_sprite[2]['standing'][2].src = 'data/sprites/animation/standing/FacingL_2.png';
+      main_sprite[2]['standing'][3] = new Image();
+      main_sprite[2]['standing'][3].src = 'data/sprites/animation/standing/FacingL_3.png';
+
+      main_sprite[3]['standing'] = new Array();
+      main_sprite[3]['standing'][1] = new Image();
+      main_sprite[3]['standing'][1].src = 'data/sprites/animation/standing/FacingL_1.png';
+      main_sprite[3]['standing'][2] = new Image();
+      main_sprite[3]['standing'][2].src = 'data/sprites/animation/standing/FacingL_2.png';
+      main_sprite[3]['standing'][3] = new Image();
+      main_sprite[3]['standing'][3].src = 'data/sprites/animation/standing/FacingL_3.png';
+
+      main_sprite[8]['standing'] = new Array();
+      main_sprite[8]['standing'][1] = new Image();
+      main_sprite[8]['standing'][1].src = 'data/sprites/animation/standing/FacingL_1.png';
+      main_sprite[8]['standing'][2] = new Image();
+      main_sprite[8]['standing'][2].src = 'data/sprites/animation/standing/FacingL_2.png';
+      main_sprite[8]['standing'][3] = new Image();
+      main_sprite[8]['standing'][3].src = 'data/sprites/animation/standing/FacingL_3.png';
+
+  
+      main_sprite[4]['standing'] = new Array();
+      main_sprite[4]['standing'][1] = new Image();
+      main_sprite[4]['standing'][1].src = 'data/sprites/animation/standing/FacingR_1.png';
+      main_sprite[4]['standing'][2] = new Image();
+      main_sprite[4]['standing'][2].src = 'data/sprites/animation/standing/FacingR_2.png';
+      main_sprite[4]['standing'][3] = new Image();
+      main_sprite[4]['standing'][3].src = 'data/sprites/animation/standing/FacingR_3.png';
+
+      main_sprite[6]['standing'] = new Array();
+      main_sprite[6]['standing'][1] = new Image();
+      main_sprite[6]['standing'][1].src = 'data/sprites/animation/standing/FacingR_1.png';
+      main_sprite[6]['standing'][2] = new Image();
+      main_sprite[6]['standing'][2].src = 'data/sprites/animation/standing/FacingR_2.png';
+      main_sprite[6]['standing'][3] = new Image();
+      main_sprite[6]['standing'][3].src = 'data/sprites/animation/standing/FacingR_3.png';
+
+      main_sprite[7]['standing'] = new Array();
+      main_sprite[7]['standing'][1] = new Image();
+      main_sprite[7]['standing'][1].src = 'data/sprites/animation/standing/FacingR_1.png';
+      main_sprite[7]['standing'][2] = new Image();
+      main_sprite[7]['standing'][2].src = 'data/sprites/animation/standing/FacingR_2.png';
+      main_sprite[7]['standing'][3] = new Image();
+      main_sprite[7]['standing'][3].src = 'data/sprites/animation/standing/FacingR_3.png';
 
 
       // running facing right = 5
       main_sprite[5]['running'] = new Array();
       main_sprite[5]['running'][1] = new Image();
-      main_sprite[5]['running'][1].src = 'data/sprites/RunCycle5_1.png';  
+      main_sprite[5]['running'][1].src = 'data/sprites/animation/RunCycle/RunCycle5_1.png';  
       main_sprite[5]['running'][2] = new Image();
-      main_sprite[5]['running'][2].src = 'data/sprites/RunCycle5_2.png';  
+      main_sprite[5]['running'][2].src = 'data/sprites/animation/RunCycle/RunCycle5_2.png';  
       main_sprite[5]['running'][3] = new Image();
-      main_sprite[5]['running'][3].src = 'data/sprites/RunCycle5_3.png';  
+      main_sprite[5]['running'][3].src = 'data/sprites/animation/RunCycle/RunCycle5_3.png';  
       main_sprite[5]['running'][4] = new Image();
-      main_sprite[5]['running'][4].src = 'data/sprites/RunCycle5_4.png'; 
+      main_sprite[5]['running'][4].src = 'data/sprites/animation/RunCycle/RunCycle5_4.png'; 
       main_sprite[5]['running'][5] = new Image();
-      main_sprite[5]['running'][5].src = 'data/sprites/RunCycle5_5.png';  
+      main_sprite[5]['running'][5].src = 'data/sprites/animation/RunCycle/RunCycle5_5.png';  
       main_sprite[5]['running'][6] = new Image();
-      main_sprite[5]['running'][6].src = 'data/sprites/RunCycle5_6.png';  
+      main_sprite[5]['running'][6].src = 'data/sprites/animation/RunCycle/RunCycle5_6.png';  
       main_sprite[5]['running'][7] = new Image();
-      main_sprite[5]['running'][7].src = 'data/sprites/RunCycle5_7.png';  
+      main_sprite[5]['running'][7].src = 'data/sprites/animation/RunCycle/RunCycle5_7.png';  
       main_sprite[5]['running'][8] = new Image();
-      main_sprite[5]['running'][8].src = 'data/sprites/RunCycle5_8.png';  
+      main_sprite[5]['running'][8].src = 'data/sprites/animation/RunCycle/RunCycle5_8.png';  
 
 
       // running facing left = 1
       main_sprite[1]['running'] = new Array();
       main_sprite[1]['running'][1] = new Image();
-      main_sprite[1]['running'][1].src = 'data/sprites/RunCycle1_1.png';  
+      main_sprite[1]['running'][1].src = 'data/sprites/animation/RunCycle/RunCycle1_1.png';  
       main_sprite[1]['running'][2] = new Image();
-      main_sprite[1]['running'][2].src = 'data/sprites/RunCycle1_2.png';  
+      main_sprite[1]['running'][2].src = 'data/sprites/animation/RunCycle/RunCycle1_2.png';  
       main_sprite[1]['running'][3] = new Image();
-      main_sprite[1]['running'][3].src = 'data/sprites/RunCycle1_3.png';  
+      main_sprite[1]['running'][3].src = 'data/sprites/animation/RunCycle/RunCycle1_3.png';  
       main_sprite[1]['running'][4] = new Image();
-      main_sprite[1]['running'][4].src = 'data/sprites/RunCycle1_4.png'; 
+      main_sprite[1]['running'][4].src = 'data/sprites/animation/RunCycle/RunCycle1_4.png'; 
       main_sprite[1]['running'][5] = new Image();
-      main_sprite[1]['running'][5].src = 'data/sprites/RunCycle1_5.png';  
+      main_sprite[1]['running'][5].src = 'data/sprites/animation/RunCycle/RunCycle1_5.png';  
       main_sprite[1]['running'][6] = new Image();
-      main_sprite[1]['running'][6].src = 'data/sprites/RunCycle1_6.png';  
+      main_sprite[1]['running'][6].src = 'data/sprites/animation/RunCycle/RunCycle1_6.png';  
       main_sprite[1]['running'][7] = new Image();
-      main_sprite[1]['running'][7].src = 'data/sprites/RunCycle1_7.png';  
+      main_sprite[1]['running'][7].src = 'data/sprites/animation/RunCycle/RunCycle1_7.png';  
       main_sprite[1]['running'][8] = new Image();
-      main_sprite[1]['running'][8].src = 'data/sprites/RunCycle1_8.png';  
+      main_sprite[1]['running'][8].src = 'data/sprites/animation/RunCycle/RunCycle1_8.png';  
+
+
+
+      main_sprite[2]['running'] = new Array();
+      main_sprite[2]['running'][1] = new Image();
+      main_sprite[2]['running'][1].src = 'data/sprites/animation/RunCycle/RunCycle2_1.png';  
+      main_sprite[2]['running'][2] = new Image();
+      main_sprite[2]['running'][2].src = 'data/sprites/animation/RunCycle/RunCycle2_2.png';  
+      main_sprite[2]['running'][3] = new Image();
+      main_sprite[2]['running'][3].src = 'data/sprites/animation/RunCycle/RunCycle2_3.png';  
+      main_sprite[2]['running'][4] = new Image();
+      main_sprite[2]['running'][4].src = 'data/sprites/animation/RunCycle/RunCycle2_4.png'; 
+      main_sprite[2]['running'][5] = new Image();
+      main_sprite[2]['running'][5].src = 'data/sprites/animation/RunCycle/RunCycle2_5.png';  
+      main_sprite[2]['running'][6] = new Image();
+      main_sprite[2]['running'][6].src = 'data/sprites/animation/RunCycle/RunCycle2_6.png';  
+      main_sprite[2]['running'][7] = new Image();
+      main_sprite[2]['running'][7].src = 'data/sprites/animation/RunCycle/RunCycle2_7.png';  
+      main_sprite[2]['running'][8] = new Image();
+      main_sprite[2]['running'][8].src = 'data/sprites/animation/RunCycle/RunCycle2_8.png';  
+
+
+      main_sprite[3]['running'] = new Array();
+      main_sprite[3]['running'][1] = new Image();
+      main_sprite[3]['running'][1].src = 'data/sprites/animation/RunCycle/RunCycle3_1.png';  
+      main_sprite[3]['running'][2] = new Image();
+      main_sprite[3]['running'][2].src = 'data/sprites/animation/RunCycle/RunCycle3_2.png';  
+      main_sprite[3]['running'][3] = new Image();
+      main_sprite[3]['running'][3].src = 'data/sprites/animation/RunCycle/RunCycle3_3.png';  
+      main_sprite[3]['running'][4] = new Image();
+      main_sprite[3]['running'][4].src = 'data/sprites/animation/RunCycle/RunCycle3_4.png'; 
+      main_sprite[3]['running'][5] = new Image();
+      main_sprite[3]['running'][5].src = 'data/sprites/animation/RunCycle/RunCycle3_5.png';  
+      main_sprite[3]['running'][6] = new Image();
+      main_sprite[3]['running'][6].src = 'data/sprites/animation/RunCycle/RunCycle3_6.png';  
+      main_sprite[3]['running'][7] = new Image();
+      main_sprite[3]['running'][7].src = 'data/sprites/animation/RunCycle/RunCycle3_7.png';  
+      main_sprite[3]['running'][8] = new Image();
+      main_sprite[3]['running'][8].src = 'data/sprites/animation/RunCycle/RunCycle3_8.png';  
+
+
+      main_sprite[4]['running'] = new Array();
+      main_sprite[4]['running'][1] = new Image();
+      main_sprite[4]['running'][1].src = 'data/sprites/animation/RunCycle/RunCycle4_1.png';  
+      main_sprite[4]['running'][2] = new Image();
+      main_sprite[4]['running'][2].src = 'data/sprites/animation/RunCycle/RunCycle4_2.png';  
+      main_sprite[4]['running'][3] = new Image();
+      main_sprite[4]['running'][3].src = 'data/sprites/animation/RunCycle/RunCycle4_3.png';  
+      main_sprite[4]['running'][4] = new Image();
+      main_sprite[4]['running'][4].src = 'data/sprites/animation/RunCycle/RunCycle4_4.png'; 
+      main_sprite[4]['running'][5] = new Image();
+      main_sprite[4]['running'][5].src = 'data/sprites/animation/RunCycle/RunCycle4_5.png';  
+      main_sprite[4]['running'][6] = new Image();
+      main_sprite[4]['running'][6].src = 'data/sprites/animation/RunCycle/RunCycle4_6.png';  
+      main_sprite[4]['running'][7] = new Image();
+      main_sprite[4]['running'][7].src = 'data/sprites/animation/RunCycle/RunCycle4_7.png';  
+      main_sprite[4]['running'][8] = new Image();
+      main_sprite[4]['running'][8].src = 'data/sprites/animation/RunCycle/RunCycle4_8.png';  
+
+
+      main_sprite[6]['running'] = new Array();
+      main_sprite[6]['running'][1] = new Image();
+      main_sprite[6]['running'][1].src = 'data/sprites/animation/RunCycle/RunCycle6_1.png';  
+      main_sprite[6]['running'][2] = new Image();
+      main_sprite[6]['running'][2].src = 'data/sprites/animation/RunCycle/RunCycle6_2.png';  
+      main_sprite[6]['running'][3] = new Image();
+      main_sprite[6]['running'][3].src = 'data/sprites/animation/RunCycle/RunCycle6_3.png';  
+      main_sprite[6]['running'][4] = new Image();
+      main_sprite[6]['running'][4].src = 'data/sprites/animation/RunCycle/RunCycle6_4.png'; 
+      main_sprite[6]['running'][5] = new Image();
+      main_sprite[6]['running'][5].src = 'data/sprites/animation/RunCycle/RunCycle6_5.png';  
+      main_sprite[6]['running'][6] = new Image();
+      main_sprite[6]['running'][6].src = 'data/sprites/animation/RunCycle/RunCycle6_6.png';  
+      main_sprite[6]['running'][7] = new Image();
+      main_sprite[6]['running'][7].src = 'data/sprites/animation/RunCycle/RunCycle6_7.png';  
+      main_sprite[6]['running'][8] = new Image();
+      main_sprite[6]['running'][8].src = 'data/sprites/animation/RunCycle/RunCycle6_8.png';  
+
+
+      main_sprite[7]['running'] = new Array();
+      main_sprite[7]['running'][1] = new Image();
+      main_sprite[7]['running'][1].src = 'data/sprites/animation/RunCycle/RunCycle7_1.png';  
+      main_sprite[7]['running'][2] = new Image();
+      main_sprite[7]['running'][2].src = 'data/sprites/animation/RunCycle/RunCycle7_2.png';  
+      main_sprite[7]['running'][3] = new Image();
+      main_sprite[7]['running'][3].src = 'data/sprites/animation/RunCycle/RunCycle7_3.png';  
+      main_sprite[7]['running'][4] = new Image();
+      main_sprite[7]['running'][4].src = 'data/sprites/animation/RunCycle/RunCycle7_4.png'; 
+      main_sprite[7]['running'][5] = new Image();
+      main_sprite[7]['running'][5].src = 'data/sprites/animation/RunCycle/RunCycle7_5.png';  
+      main_sprite[7]['running'][6] = new Image();
+      main_sprite[7]['running'][6].src = 'data/sprites/animation/RunCycle/RunCycle7_6.png';  
+      main_sprite[7]['running'][7] = new Image();
+      main_sprite[7]['running'][7].src = 'data/sprites/animation/RunCycle/RunCycle7_7.png';  
+      main_sprite[7]['running'][8] = new Image();
+      main_sprite[7]['running'][8].src = 'data/sprites/animation/RunCycle/RunCycle7_8.png';  
+
+
+      main_sprite[8]['running'] = new Array();
+      main_sprite[8]['running'][1] = new Image();
+      main_sprite[8]['running'][1].src = 'data/sprites/animation/RunCycle/RunCycle8_1.png';  
+      main_sprite[8]['running'][2] = new Image();
+      main_sprite[8]['running'][2].src = 'data/sprites/animation/RunCycle/RunCycle8_2.png';  
+      main_sprite[8]['running'][3] = new Image();
+      main_sprite[8]['running'][3].src = 'data/sprites/animation/RunCycle/RunCycle8_3.png';  
+      main_sprite[8]['running'][4] = new Image();
+      main_sprite[8]['running'][4].src = 'data/sprites/animation/RunCycle/RunCycle8_4.png'; 
+      main_sprite[8]['running'][5] = new Image();
+      main_sprite[8]['running'][5].src = 'data/sprites/animation/RunCycle/RunCycle8_5.png';  
+      main_sprite[8]['running'][6] = new Image();
+      main_sprite[8]['running'][6].src = 'data/sprites/animation/RunCycle/RunCycle8_6.png';  
+      main_sprite[8]['running'][7] = new Image();
+      main_sprite[8]['running'][7].src = 'data/sprites/animation/RunCycle/RunCycle8_7.png';  
+      main_sprite[8]['running'][8] = new Image();
+      main_sprite[8]['running'][8].src = 'data/sprites/animation/RunCycle/RunCycle8_8.png';  
+
 
 }
 
@@ -107,8 +280,8 @@ function Player()
 {
   this.x = 2500;
   this.y = 2500;
-  this.drawX = 640-50;
-  this.drawY = 400-200;
+  this.drawX = 640-125;
+  this.drawY = 400-180;
   this.speed = 4;
   this.m_down = false;
   this.m_up = false;
@@ -152,6 +325,17 @@ Player.prototype.draw = function()
   if (this.AniState > (limit*5)) {
     this.AniState = 1;
   }
+  if (this.Animation == 'standing')
+  {
+    this.drawX=640-50;
+    this.drawY=400-180;
+
+  }else {
+    this.drawX=640-125;
+    this.drawY=400-180;
+
+
+  }
 
   main_ctx.drawImage(main_sprite[this.facing][this.Animation][1+Math.floor((this.AniState-1)/5)], this.drawX, this.drawY);
   this.AniState++;
@@ -192,13 +376,13 @@ Player.prototype.check_keys = function()
   if (this.m_right == true){
     
     if (this.m_up == true){
-      this.facing = 5;
+      this.facing = 4;
       this.Animation = 'running';
 
     }
     
     if (this.m_down == true){
-      this.facing = 5;
+      this.facing = 6;
       this.Animation = 'running';
     }
     
@@ -211,12 +395,12 @@ Player.prototype.check_keys = function()
   if (this.m_left == true){
 
     if (this.m_up == true){
-      this.facing = 1;
+      this.facing = 2;
       this.Animation = 'running';
     }
     
     if (this.m_down == true){
-      this.facing = 1;
+      this.facing = 8;
       this.Animation = 'running';
     }
     if (this.m_down ==false && this.m_up == false) {
@@ -226,12 +410,12 @@ Player.prototype.check_keys = function()
   }
   
   if (this.m_up == true && this.m_right == false && this.m_left == false){
-    this.facing = 1;
+    this.facing = 3;
     this.Animation='running';
   }
 
   if ((this.m_down == true) && (this.m_right == false) && (this.m_left == false)) {
-    this.facing = 5;
+    this.facing = 7;
     this.Animation='running';
   }
 
